@@ -274,7 +274,7 @@ python3 -m http.server 8000
 
 - 📧 Email: [hello@viktor-wilhelm.de](mailto:hello@viktor-wilhelm.de)
 - 💼 LinkedIn: [Viktor Wilhelm](https://www.linkedin.com/in/viktor-wilhelm)
-- 💻 GitHub: [@viktor-wilhelm](https://github.com/viktor-wilhelm)
+- 💻 GitHub: [viktor-wilhelm](https://github.com/viktor-wilhelm)
 
 ## 📝 Lizenz
 
