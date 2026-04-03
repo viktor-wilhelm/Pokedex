@@ -81,6 +81,10 @@ Eine moderne, responsive Pokédex-Webanwendung, die die [PokéAPI](https://pokea
   - **Suchleiste** (mindestens 3 Buchstaben erforderlich)
   - Search-Button aktiviert sich erst ab 3 Zeichen
 
+## 🌐 Live Demo
+
+🚀 **[Pokedex Live Demo](https://pokedex.viktor-wilhelm.de)** - Probier die App jetzt aus!
+
 ## 🚀 Features
 
 ### Kernfunktionen
@@ -268,7 +272,10 @@ python3 -m http.server 8000
 
 **Viktor Wilhelm**
 
-- GitHub: [@rockviktor78](https://github.com/rockviktor78)
+- 🌐 Website: [viktor-wilhelm.de](https://viktor-wilhelm.de)
+- 📧 Email: [hello@viktor-wilhelm.de](mailto:hello@viktor-wilhelm.de)
+- 💼 LinkedIn: [Viktor Wilhelm](https://www.linkedin.com/in/viktor-wilhelm)
+- 💻 GitHub: [@rockviktor78](https://github.com/rockviktor78)
 
 ## 📝 Lizenz
 
