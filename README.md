@@ -226,7 +226,7 @@ export function createStatsHTML(stats) { ... }
 
 ```bash
 # Repository klonen
-git clone https://github.com/rockviktor78/Pokedex.git
+git clone https://github.com/viktor-wilhelm/Pokedex.git
 
 # In das Verzeichnis wechseln
 cd Pokedex
@@ -272,10 +272,9 @@ python3 -m http.server 8000
 
 **Viktor Wilhelm**
 
-- 🌐 Website: [viktor-wilhelm.de](https://viktor-wilhelm.de)
 - 📧 Email: [hello@viktor-wilhelm.de](mailto:hello@viktor-wilhelm.de)
 - 💼 LinkedIn: [Viktor Wilhelm](https://www.linkedin.com/in/viktor-wilhelm)
-- 💻 GitHub: [@rockviktor78](https://github.com/rockviktor78)
+- 💻 GitHub: [@viktor-wilhelm](https://github.com/viktor-wilhelm)
 
 ## 📝 Lizenz
 
