@@ -8,6 +8,10 @@ Eine moderne, responsive Pokédex-Webanwendung, die die [PokéAPI](https://pokea
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![CSS3](https://img.shields.io/badge/CSS3-Responsive-1572B6?style=for-the-badge&logo=css3)
 
+## 🌐 Live Demo
+
+👉 **[pokedex.viktor-wilhelm.de](https://pokedex.viktor-wilhelm.de/)**
+
 ## 📋 Projekt-Checkliste
 
 ### ✅ 1. Git-Workflow
