@@ -1,10 +1,8 @@
 # 🎮 Pokédex Web Application
 
-Eine moderne, responsive Pokédex-Webanwendung, die die [PokéAPI](https://pokeapi.co/) nutzt, um detaillierte Informationen über Pokémon anzuzeigen.
+A modern, responsive Pokédex web application that uses the [PokéAPI](https://pokeapi.co/) to display detailed information about Pokémon.
 
-![Pokédex Screenshot](./assets/images/pokedex_screenshot,.png)
-
-![Pokédex Banner](https://img.shields.io/badge/Pok%C3%A9mon-API-ffcc00?style=for-the-badge&logo=pokemon)
+![Pokédex Banner](https://img.shields.io/badge/Pok%C3%A9món-API-ffcc00?style=for-the-badge&logo=pokemon)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![CSS3](https://img.shields.io/badge/CSS3-Responsive-1572B6?style=for-the-badge&logo=css3)
 
@@ -12,115 +10,40 @@ Eine moderne, responsive Pokédex-Webanwendung, die die [PokéAPI](https://pokea
 
 👉 **[pokedex.viktor-wilhelm.de](https://pokedex.viktor-wilhelm.de/)**
 
-## 📋 Projekt-Checkliste
-
-### ✅ 1. Git-Workflow
-
-- [x] GitHub Repository von Anfang an genutzt
-- [x] Regelmäßige Commits nach Coding-Sessions
-- [x] Klare, aussagekräftige Commit-Messages (z.B. "style: Refactor API for improved readability")
-- [x] `.gitignore` vorhanden und konfiguriert
-- [x] Repository ist aktuell und gepflegt
-
-### ✅ 2. Allgemeine Anforderungen
-
-- [x] **20 Pokémon** werden initial geladen
-- [x] **Lazy-Loading**: Details werden erst beim Öffnen der Detailkarte geladen
-- [x] **Fetch-then-Render**: Daten werden geladen, dann gerendert
-- [x] **Load More Button**: Lädt weitere 20 Pokémon
-  - [x] Loading-Screen mit Spinner
-  - [x] Button ist während des Ladens deaktiviert
-- [x] Eigenes, kreatives Design ohne Mockup
-
-### ✅ 3. Kleine Pokémon-Karte (Listenansicht)
-
-- [x] **Name** (Großgeschrieben!)
-- [x] **Typ/en** mit Farb-Badges
-- [x] **Bild** des Pokémon (hochauflösend)
-- [x] **Hintergrundfarbe** passend zum Typ
-- [x] **ID** (#001, #002, etc.)
-- [x] **Hover-Effekt** mit Scale-Animation
-
-### ✅ 4. Große Ansicht (Overlay/Modal)
-
-- [x] Öffnet beim Klick auf kleine Karte
-- [x] **Transparentes Overlay** mit Backdrop-Filter
-- [x] Schließt beim Klick außerhalb der Karte
-- [x] Hintergrund nicht scrollbar während Modal offen
-- [x] **Angezeigt werden**:
-  - Name & ID
-  - Typ/en
-  - Hochauflösendes Bild
-  - **Base Stats**: HP, Attack, Defense, Sp. Attack, Sp. Defense, Speed
-  - **Physische Eigenschaften**: Größe, Gewicht
-  - **Fähigkeiten** (inkl. versteckte Fähigkeiten)
-- [x] **Navigation**: Pfeile zum Wechseln zwischen Pokémon
-
-### ✅ 5. Code-Qualität
-
-- [x] **Aussagekräftige Namen** für Funktionen und Variablen
-- [x] **camelCase** konsequent verwendet
-- [x] Code ist formatiert und einheitlich
-- [x] **Höchstens 14 Zeilen pro Funktion** (alle Funktionen refaktoriert)
-- [x] **Gleicher Abstand** zwischen Funktionen (1-2 Leerzeilen)
-- [x] **HTML Templates ausgelagert** in `templates.js`
-
-### ✅ 6. Responsive Design
-
-- [x] **Bis 320px Breite** responsive ohne Scrollbalken
-- [x] **Content-Begrenzung** für große Monitore (max-width)
-- [x] **Mobile-First Ansatz** durchgängig implementiert
-- [x] Breakpoints: 480px, 768px, 1024px
-- [x] Touch-optimierte Bedienung
-
-### ✅ 7. Sonstiges
-
-- [x] **Favicon** vorhanden (pokeball.svg)
-- [x] **Dokumenten-Titel**: "Pokédex - Explore the World of Pokémon"
-- [x] Hauptseite heißt **index.html**
-- [x] **Sprachkonsistenz**: Alles auf Englisch (API ist Englisch)
-- [x] **Header** mit:
-  - Logo (Pokéball)
-  - Titel (Pokédex)
-  - **Suchleiste** (mindestens 3 Buchstaben erforderlich)
-  - Search-Button aktiviert sich erst ab 3 Zeichen
-
-## 🌐 Live Demo
-
-🚀 **[Pokedex Live Demo](https://pokedex.viktor-wilhelm.de)** - Probier die App jetzt aus!
+> 💡 **Tip:** Ctrl + Click → open Live Demo in a new tab
 
 ## 🚀 Features
 
-### Kernfunktionen
+### Core Features
 
-- ✨ **Moderne UI** mit Glasmorphismus-Effekten
-- 🔍 **Live-Suche** mit Autocomplete
-- 📱 **Vollständig Responsive** (320px - 1920px+)
-- ⚡ **Performance-Optimiert** mit Caching
-- ♿ **Accessibility** (ARIA-Labels, Keyboard-Navigation)
-- 🎨 **Typ-basierte Farbgebung**
-- 🌙 **Smooth Animations** & Transitions
+- ✨ **Modern UI** with glassmorphism effects
+- 🔍 **Live Search** with autocomplete
+- 📱 **Fully Responsive** (320px - 1920px+)
+- ⚡ **Performance Optimized** with caching
+- ♿ **Accessibility** (ARIA labels, keyboard navigation)
+- 🎨 **Type-based Color Scheme**
+- 🌙 **Smooth Animations & Transitions**
 
-### Zusätzliche Features (Extras)
+### Additional Features
 
-- 🎯 **Intelligente Suche**:
-  - 3-Zeichen-Minimum-Validierung
-  - Autocomplete mit Top-10-Vorschlägen
-  - Suche nach Name oder ID
-- 💾 **Smart Caching**: Bereits geladene Pokémon werden zwischengespeichert
-- 🔄 **Fehlerbehandlung**: Globale Error-Handler mit User-Feedback
-- 📊 **Detaillierte Stats**: Visualisierte Balken für alle Werte
-- 🎮 **Keyboard-Navigation**: Pfeiltasten im Modal
-- 🔔 **Toast-Notifications**: Benutzer-Feedback bei Aktionen
+- 🎯 **Smart Search**:
+  - 3-character minimum validation
+  - Autocomplete with top 10 suggestions
+  - Search by name or ID
+- 💾 **Smart Caching**: Previously loaded Pokémon are cached
+- 🔄 **Error Handling**: Global error handlers with user feedback
+- 📊 **Detailed Stats**: Visualized bars for all values
+- 🎮 **Keyboard Navigation**: Arrow keys in modal
+- 🔔 **Toast Notifications**: User feedback on actions
 
-## 🛠️ Technologie-Stack
+## 🛠️ Technology Stack
 
 ```
 Frontend:
 ├── Vanilla JavaScript (ES6+)
 ├── CSS3 (Grid, Flexbox, Custom Properties)
 ├── HTML5 Semantic Markup
-└── Module-basierte Architektur
+└── Module-based Architecture
 
 API:
 └── PokéAPI v2 (REST)
@@ -130,7 +53,7 @@ Tools:
 └── VS Code
 ```
 
-## 📁 Projektstruktur
+## 📁 Project Structure
 
 ```
 Pokedex/
@@ -139,37 +62,53 @@ Pokedex/
 ├── scripts/
 │   ├── main.js         # App Entry Point
 │   ├── api.js          # PokéAPI Integration
-│   ├── templates.js    # HTML Template Functions
-│   ├── search.js       # Search & Autocomplete
-│   ├── pokemon-list.js # Card Rendering
 │   ├── pokemon-detail.js # Modal Logic
+│   ├── pokemon-list.js # Card Rendering
+│   ├── search.js       # Search & Autocomplete
 │   ├── ui-helpers.js   # UI Utility Functions
-│   └── constants.js    # Configuration & Constants
+│   ├── constants.js    # Configuration & Constants
+│   ├── footer.js       # Footer Logic
+│   ├── components/
+│   │   └── notification.js
+│   └── templates/
+│       ├── footer-templates.js
+│       ├── modal-template.js
+│       ├── notification-template.js
+│       ├── pokemon-card-template.js
+│       ├── pokemon-details-template.js
+│       └── ui-elements-template.js
 ├── styles/
 │   ├── global.css      # Global Styles & Variables
 │   ├── layout.css      # Layout System
 │   ├── components/     # Component-Specific Styles
-│   │   ├── header.css
-│   │   ├── pokemon-card.css
-│   │   ├── modal.css
-│   │   ├── search.css
 │   │   ├── buttons.css
-│   │   └── loading.css
+│   │   ├── footer.css
+│   │   ├── header.css
+│   │   ├── legal-modal.css
+│   │   ├── loading.css
+│   │   ├── modal.css
+│   │   ├── notification.css
+│   │   ├── pokemon-card.css
+│   │   ├── pokemon-detail.css
+│   │   └── search.css
 │   └── utilities/      # Utility Styles
-│       ├── responsive.css
-│       └── animations.css
+│       ├── animations.css
+│       ├── responsive-accessibility.css
+│       ├── responsive-desktop.css
+│       ├── responsive-mobile.css
+│       └── responsive-tablet.css
 ├── index.html          # Main HTML File
 ├── .gitignore
 └── README.md
 ```
 
-## 🎯 Code-Architektur
+## 🎯 Code Architecture
 
-### Modulare JavaScript-Struktur
+### Modular JavaScript Structure
 
 ```javascript
-// Alle Funktionen sind maximal 14 Zeilen lang
-// Beispiel aus api.js:
+// All functions are maximum 14 lines long
+// Example from api.js:
 
 export let fetchPokemonList = async (offset, limit) => {
   const url = `${API_CONFIG.baseUrl}${API_CONFIG.endpoints.pokemon}?offset=${offset}&limit=${limit}`;
@@ -187,12 +126,12 @@ export let fetchPokemonList = async (offset, limit) => {
 };
 ```
 
-### Template-System
+### Template System
 
-Alle HTML-Templates sind in separate Funktionen ausgelagert:
+All HTML templates are outsourced to separate functions:
 
 ```javascript
-// templates.js
+// templates/
 export function createPokemonCardHTML(pokemon) { ... }
 export function createModalHTML(pokemon) { ... }
 export function createStatsHTML(stats) { ... }
@@ -218,61 +157,61 @@ export function createStatsHTML(stats) { ... }
 }
 ```
 
-## 🎨 Design-Prinzipien
+## 🎨 Design Principles
 
-- **Mobile-First**: Optimiert für kleine Bildschirme zuerst
-- **Accessibility**: WCAG 2.1 AA konform
-- **Performance**: Lazy Loading, Caching, optimierte Bilder
-- **UX**: Klare Feedback-Mechanismen, intuitive Navigation
-- **Clean Code**: Max 14 Zeilen pro Funktion, klare Namensgebung
+- **Mobile-First**: Optimized for small screens first
+- **Accessibility**: WCAG 2.1 AA compliant
+- **Performance**: Lazy loading, caching, optimized images
+- **UX**: Clear feedback mechanisms, intuitive navigation
+- **Clean Code**: Max 14 lines per function, clear naming conventions
 
-## 🚦 Installation & Start
+## 🚦 Installation & Setup
 
 ```bash
-# Repository klonen
+# Clone the repository
 git clone https://github.com/viktor-wilhelm/Pokedex.git
 
-# In das Verzeichnis wechseln
+# Navigate to the directory
 cd Pokedex
 
-# Mit einem lokalen Server starten (z.B. Live Server in VS Code)
-# Oder Python SimpleHTTPServer:
+# Start a local server (e.g., Live Server in VS Code)
+# Or use Python's built-in HTTP server:
 python3 -m http.server 8000
 
-# Im Browser öffnen
+# Open in your browser
 # http://localhost:8000
 ```
 
-## 🔍 Verwendung
+## 🔍 Usage
 
-1. **Pokémon durchsuchen**: Scrollen Sie durch die Liste oder nutzen Sie die Suchfunktion
-2. **Suche**: Mindestens 3 Zeichen eingeben für Autocomplete
-3. **Details ansehen**: Klicken Sie auf eine Pokémon-Karte
-4. **Navigation im Modal**: Verwenden Sie die Pfeile oder Tastatur (← →)
-5. **Mehr laden**: Klicken Sie auf "Load More Pokémon"
+1. **Browse Pokémon**: Scroll through the list or use the search function
+2. **Search**: Enter at least 3 characters for autocomplete suggestions
+3. **View Details**: Click on a Pokémon card to open the modal
+4. **Modal Navigation**: Use arrow keys or arrow buttons (← →)
+5. **Load More**: Click "Load More Pokémon" to fetch additional Pokémon
 
-## 📊 Performance-Optimierungen
+## 📊 Performance Optimizations
 
-- ✅ **API-Caching**: Verhindert redundante Netzwerk-Requests
-- ✅ **Lazy Loading**: Details werden erst bei Bedarf geladen
-- ✅ **Debouncing**: Suchfunktion verzögert API-Calls
-- ✅ **Image Optimization**: Hochauflösende Bilder von offizieller Quelle
+- ✅ **API Caching**: Prevents redundant network requests
+- ✅ **Lazy Loading**: Details are only loaded when needed
+- ✅ **Debouncing**: Search function delays API calls for better performance
+- ✅ **Image Optimization**: High-quality images from official sources
 
-## 🐛 Bekannte Limitierungen
+## 🐛 Known Limitations
 
-- PokéAPI Rate Limit: Max. 100 Requests pro Minute
-- Keine Offline-Funktionalität (PWA könnte implementiert werden)
+- PokéAPI Rate Limit: Max 100 requests per minute
+- No offline functionality (PWA could be implemented)
 
-## 🔮 Mögliche Erweiterungen
+## 🔮 Future Enhancements
 
-- [ ] Favoriten-System mit LocalStorage
-- [ ] Filterfunktion nach Typ, Generation
-- [ ] Vergleichsfunktion für Pokémon
-- [ ] Dark Mode Toggle
+- [ ] Favorites system with LocalStorage
+- [ ] Filter function by type, generation
+- [ ] Pokémon comparison feature
+- [ ] Dark Mode toggle
 - [ ] Progressive Web App (PWA)
-- [ ] Mehrsprachigkeit
+- [ ] Multi-language support
 
-## 👨‍💻 Entwickler
+## 👨‍💻 Developer
 
 **Viktor Wilhelm**
 
@@ -280,16 +219,22 @@ python3 -m http.server 8000
 - 💼 LinkedIn: [Viktor Wilhelm](https://www.linkedin.com/in/viktor-wilhelm)
 - 💻 GitHub: [viktor-wilhelm](https://github.com/viktor-wilhelm)
 
-## 📝 Lizenz
+## 📝 License
 
-Dieses Projekt wurde für Lernzwecke erstellt. Pokémon und alle verwandten Charaktere sind Eigentum von Nintendo, Game Freak und Creatures Inc.
+This project was created for learning purposes. Pokémon and all related characters are the property of Nintendo, Game Freak, and Creatures Inc.
 
-## 🙏 Danksagungen
+## 🙏 Acknowledgments
 
-- **PokéAPI**: Für die umfassende und kostenlose API
-- **Nintendo/Game Freak**: Für das Pokémon-Franchise
-- Alle Entwickler, die zur Open-Source-Community beitragen
+- **PokéAPI**: For providing a comprehensive and free API
+- **Nintendo/Game Freak**: For the Pokémon franchise
+- All developers contributing to the open-source community
 
 ---
 
-**⭐ Wenn dir dieses Projekt gefällt, gib ihm einen Stern auf GitHub!**
+## 📸 Screenshots
+
+![Pokédex Screenshot](./assets/images/pokedex_screenshot,.png)
+
+---
+
+**⭐ If you like this project, please give it a star on GitHub!**
