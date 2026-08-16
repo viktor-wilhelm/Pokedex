@@ -28,13 +28,13 @@ A modern, responsive Pokédex web application that uses the [PokéAPI](https://p
 
 - 🎯 **Smart Search**:
   - 3-character minimum validation
-  - Autocomplete with top 10 suggestions
+  - Autocomplete with top 8 suggestions
   - Search by name or ID
 - 💾 **Smart Caching**: Previously loaded Pokémon are cached
 - 🔄 **Error Handling**: Global error handlers with user feedback
 - 📊 **Detailed Stats**: Visualized bars for all values
 - 🎮 **Keyboard Navigation**: Arrow keys in modal
-- 🔔 **Toast Notifications**: User feedback on actions
+- 🔔 **Notification Feedback**: User feedback when a search yields no results
 
 ## 🛠️ Technology Stack
 
@@ -58,7 +58,8 @@ Tools:
 ```
 Pokedex/
 ├── assets/
-│   └── icons/          # SVG Icons (Pokéball, Search, etc.)
+│   ├── icons/           # SVG Icons (Pokéball, Search, etc.)
+│   └── images/          # Screenshots used in this README
 ├── scripts/
 │   ├── main.js         # App Entry Point
 │   ├── api.js          # PokéAPI Integration
@@ -107,22 +108,25 @@ Pokedex/
 ### Modular JavaScript Structure
 
 ```javascript
-// All functions are maximum 14 lines long
 // Example from api.js:
+
+let processPokemonListResponse = async (data, offset) => {
+  appState.currentOffset = offset;
+  const pokemonDetails = await fetchPokemonDetails(data.results);
+  appState.pokemonList.push(...pokemonDetails);
+  return pokemonDetails;
+};
 
 export let fetchPokemonList = async (offset, limit) => {
   const url = `${API_CONFIG.baseUrl}${API_CONFIG.endpoints.pokemon}?offset=${offset}&limit=${limit}`;
+
   const response = await fetch(url);
-  if (!response.ok) throw new Error(`API Error: ${response.status}`);
+  if (!response.ok) {
+    throw new Error(`API Error: ${response.status}`);
+  }
 
   const data = await response.json();
-  appState.currentOffset = offset;
-
-  const pokemonDetails = await fetchPokemonDetails(data.results);
-  appState.pokemonList.push(...pokemonDetails);
-
-  console.log("📊 API data processed:", data.results.length, "Pokémon");
-  return pokemonDetails;
+  return await processPokemonListResponse(data, offset);
 };
 ```
 
@@ -139,8 +143,9 @@ export function createStatsHTML(stats) { ... }
 
 ## 📱 Responsive Breakpoints
 
+Simplified overview of the main responsive ranges (Mobile-First Approach):
+
 ```css
-/* Mobile First Approach */
 /* Base: 320px - 479px */
 
 @media (min-width: 480px) {
@@ -157,10 +162,12 @@ export function createStatsHTML(stats) { ... }
 }
 ```
 
+Additional fine-grained breakpoints and accessibility-related media queries (e.g. `prefers-reduced-motion`, `prefers-contrast`) exist in `styles/utilities/responsive-*.css`.
+
 ## 🎨 Design Principles
 
 - **Mobile-First**: Optimized for small screens first
-- **Accessibility**: WCAG 2.1 AA compliant
+- **Accessibility**: ARIA labels on key interactive elements, keyboard navigation
 - **Performance**: Lazy loading, caching, optimized images
 - **UX**: Clear feedback mechanisms, intuitive navigation
 - **Clean Code**: Max 14 lines per function, clear naming conventions
@@ -194,12 +201,11 @@ python3 -m http.server 8000
 
 - ✅ **API Caching**: Prevents redundant network requests
 - ✅ **Lazy Loading**: Details are only loaded when needed
-- ✅ **Debouncing**: Search function delays API calls for better performance
 - ✅ **Image Optimization**: High-quality images from official sources
 
 ## 🐛 Known Limitations
 
-- PokéAPI Rate Limit: Max 100 requests per minute
+- PokéAPI availability and usage are subject to the API provider's fair-use policy.
 - No offline functionality (PWA could be implemented)
 
 ## 🔮 Future Enhancements
